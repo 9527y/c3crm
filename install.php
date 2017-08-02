@@ -26,5 +26,4 @@ if (isset($_REQUEST['file'])) $the_file = $_REQUEST['file'];
 else $the_file = "0welcome.php";
 
 include("install/".$the_file);
-
 ?>
