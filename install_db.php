@@ -1,5 +1,6 @@
 <?php
 set_time_limit(600);
+$root_directory = dirname(__FILE__)."/";
 
 if (isset($_REQUEST['db_name'])) $db_name  				= $_REQUEST['db_name'];
 if (isset($_REQUEST['db_drop_tables'])) $db_drop_tables 	= $_REQUEST['db_drop_tables'];

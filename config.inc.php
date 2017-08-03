@@ -11,11 +11,11 @@ include('ecversion.php');
       db_name
 */
 
-$dbconfig['db_server'] = 'localhost';
+$dbconfig['db_server'] = '127.0.0.1';
 $dbconfig['db_port'] = ':3306';
 $dbconfig['db_username'] = 'root';
 $dbconfig['db_password'] = '';
-$dbconfig['db_name'] = 'freecrm';
+$dbconfig['db_name'] = 'ytlcrm';
 $dbconfig['db_type'] = 'mysql';
 $dbconfig['db_status'] = 'true';
 
@@ -25,10 +25,10 @@ $dbconfig['db_hostname'] = $dbconfig['db_server'].$dbconfig['db_port'];
 
 $host_name = $dbconfig['db_hostname'];
 
-$site_URL = 'http://www.crm.com/';
+$site_URL = 'http://crm.yuntonglu.net/';
 
 // root directory path
-$root_directory = '/Applications/XAMPP/xamppfiles/htdocs/crm/';
+$root_directory = '/Applications/XAMPP/xamppfiles/htdocs/c3crm/';
 
 // cache direcory path
 $cache_dir = 'cache/';
