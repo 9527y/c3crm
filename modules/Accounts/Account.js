@@ -282,24 +282,24 @@ function check_duplicate_ajax()
 	
 	var accountname = window.document.EditView.accountname.value;
 	var phone = window.document.EditView.phone.value;
-	var membername = window.document.EditView.membername.value;
 	var email = window.document.EditView.email.value;
 	var record = window.document.EditView.record.value;
 	
-	var strstring = "&accountname="+accountname+"&phone="+phone+"&email="+email+"&record="+record+"&membername="+membername;
+	var strstring = "&accountname="+accountname+"&phone="+phone+"&email="+email+"&record="+record;
 
 	$.ajax({
 		type:"GET",
 		url:'index.php?module=Accounts&action=AccountsAjax&file=Save&ajax=true&dup_check=true'+strstring,
 		success : function(msg){
-			if(msg.indexOf('1')> -1 ) {
+			if(msg.indexOf('SUCCESS')> -1 ) {
 				var buttonsave = document.getElementsByName("savebutton");
 				buttonsave[0].disabled = "disabled";
 				buttonsave[1].disabled = "disabled";
-				window.location.href=msg.substr(1);
+
+				document.EditView.submit();
+
 			}else{
 				alert(msg);
-				history.go(-1);
 			}
 		}
 	});
