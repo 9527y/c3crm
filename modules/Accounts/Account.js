@@ -269,11 +269,12 @@ function set_return_todo(product_id, product_name) {
 var flag = false;
 
 
-function check_duplicate() {
+function check_duplicate(e,action) {
 
 	flag = formValidate();
 	
 	if(flag) {
+        e.form.action.value=action;
 		check_duplicate_ajax();
 	}
 }
@@ -299,7 +300,9 @@ function check_duplicate_ajax()
 				document.EditView.submit();
 
 			}else{
+                flag = false;
 				alert(msg);
+				return false;
 			}
 		}
 	});
