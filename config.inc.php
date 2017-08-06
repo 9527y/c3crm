@@ -11,13 +11,21 @@ include('ecversion.php');
       db_name
 */
 
-$dbconfig['db_server'] = '127.0.0.1';
+$dbconfig['db_server'] = '47.93.78.99';
 $dbconfig['db_port'] = ':3306';
-$dbconfig['db_username'] = 'root';
-$dbconfig['db_password'] = '';
-$dbconfig['db_name'] = 'ytlcrm';
+$dbconfig['db_username'] = 'mq';
+$dbconfig['db_password'] = 'qwer!@#$';
+$dbconfig['db_name'] = 'orgincrm';
 $dbconfig['db_type'] = 'mysql';
 $dbconfig['db_status'] = 'true';
+
+//$dbconfig['db_server'] = '127.0.0.1';
+//$dbconfig['db_port'] = ':3306';
+//$dbconfig['db_username'] = 'root';
+//$dbconfig['db_password'] = '';
+//$dbconfig['db_name'] = 'ytlcrm';
+//$dbconfig['db_type'] = 'mysql';
+//$dbconfig['db_status'] = 'true';
 
 // TODO: test if port is empty
 // TODO: set db_hostname dependending on db_type
