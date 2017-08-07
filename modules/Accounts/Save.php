@@ -39,6 +39,7 @@ if ($adb->num_rows($result) > 0) {
 } else {
     if (isset($_REQUEST['dup_check']) && $_REQUEST['dup_check'] != '') {
         echo 'SUCCESS';
+        die;
     } else {
         $focus = new Accounts();
         if (isset($_REQUEST['record'])) {
@@ -84,6 +85,6 @@ if ($adb->num_rows($result) > 0) {
 
         redirect("index.php?action=$return_action&module=$return_module&parenttab=$parenttab&record=$return_id&viewname=$return_viewname");
     }
-    die;
+
 }
 ?>

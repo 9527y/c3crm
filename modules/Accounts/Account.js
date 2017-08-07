@@ -269,12 +269,12 @@ function set_return_todo(product_id, product_name) {
 var flag = false;
 
 
-function check_duplicate(e,action) {
+function check_duplicate(e,a) {
 
 	flag = formValidate();
 	
 	if(flag) {
-        e.form.action.value=action;
+        e.form.action.value=a;
 		check_duplicate_ajax();
 	}
 }
