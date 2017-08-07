@@ -34,12 +34,9 @@ if ($adb->num_rows($result) > 0) {
     } else {
         echo '<script>history.go(-1)</script>';
     }
-    die;
-
 } else {
     if (isset($_REQUEST['dup_check']) && $_REQUEST['dup_check'] != '') {
         echo 'SUCCESS';
-        die;
     } else {
         $focus = new Accounts();
         if (isset($_REQUEST['record'])) {
@@ -82,9 +79,7 @@ if ($adb->num_rows($result) > 0) {
 //code added for returning back to the current view after edit from list view
         if ($_REQUEST['return_viewname'] == '') $return_viewname = '0';
         if ($_REQUEST['return_viewname'] != '') $return_viewname = $_REQUEST['return_viewname'];
-
         redirect("index.php?action=$return_action&module=$return_module&parenttab=$parenttab&record=$return_id&viewname=$return_viewname");
     }
-
 }
 ?>

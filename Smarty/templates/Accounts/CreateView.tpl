@@ -1,7 +1,7 @@
 <script type="text/javascript" src="modules/{$MODULE}/{$SINGLE_MOD}.js"></script>
 
 {*<!-- Contents -->*}
-<form name="EditView" method="POST" action="index.php">
+<form name="EditView" method="POST" action="index.php" onsubmit="account_submit();">
 <input type="hidden" name="module" value="{$MODULE}">
 <input type="hidden" name="record" value="{$ID}">
 <input type="hidden" name="mode" value="{$MODE}">
@@ -40,7 +40,8 @@
                     <i class="icon-arrow-left icon-white"></i>取消</button>
               </div>
               <div class="pull-right" style="margin-bottom:5px;" >
-                  <button class="btn btn-small btn-success" style="margin-top:2px;" onclick="check_duplicate(this,'Save')" name="savebutton" type="button">
+                  {*<button class="btn btn-small btn-success" style="margin-top:2px;" onclick="check_duplicate(this,'Save')" name="savebutton" type="button">*}
+                  <button class="btn btn-small btn-success" style="margin-top:2px;" onclick="check_duplicate(this,'Save')" type="button">
                     <i class="icon-ok icon-white"></i> 保存 </button>
                  
              </div>
@@ -71,8 +72,9 @@
                     <i class="icon-arrow-left icon-white"></i>取消</button>
               </div>
               <div class="pull-right" style="margin-bottom:5px;" >
-                  <button class="btn btn-small btn-success" style="margin-top:2px;" onclick="check_duplicate(this,'Save')" name="savebutton">
-                    <i class="icon-ok icon-white"></i> 保存 </button>
+                  {*<button class="btn btn-small btn-success" style="margin-top:2px;" onclick="check_duplicate(this,'Save')" name="savebutton"> <i class="icon-ok icon-white"></i> 保存 </button>*}
+                  <button class="btn btn-small btn-success" style="margin-top:2px;" onclick="check_duplicate(this,'Save')"> <i class="icon-ok icon-white"></i> 保存 </button>
+                  {*<input class="btn btn-small btn-success" style="margin-top:2px;" name="savebutton" type="submit" value="保存" />*}
              </div>
              <div class="clearfix"></div>
             
