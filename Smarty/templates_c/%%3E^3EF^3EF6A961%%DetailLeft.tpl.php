@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2017-08-03 21:34:01
+<?php /* Smarty version 2.6.18, created on 2017-08-06 23:43:25
          compiled from Accounts/DetailLeft.tpl */ ?>
 <div class="accordion-group">
               <div class="accordion-heading">
