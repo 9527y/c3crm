@@ -130,8 +130,7 @@ function alphabetic(module,url,dataid)
 
              
               <div class="pull-left" style="margin-bottom:5px;">
-                <button class="btn btn-small btn-primary" style="margin-top:2px;" onclick="javascript:location.href='index.php?module={$MODULE}&action=EditView'">
-                  <i class="icon-plus icon-white"></i>新增</button>
+                {*<button class="btn btn-small btn-primary" style="margin-top:2px;" onclick="javascript:location.href='index.php?module={$MODULE}&action=EditView'"><i class="icon-plus icon-white"></i>新增</button>*}
                 <button class="btn btn-small btn-danger" style="margin-top:2px;" onclick="javascript:return massDelete('{$MODULE}');">
                   <i class="icon-trash icon-white"></i>删除</button>
                

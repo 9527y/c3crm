@@ -293,13 +293,13 @@ li {
 
 
 
-<script>
-{literal}
-function openRunEvent(sfalisteventsid){
-	var url = 'index.php?module=Sfalists&action=RunEvent&record='+sfalisteventsid;
-	window.open (url,'openRunEvent','height=650,width=750,top=0,left=0,toolbar=no,menubar=no,scrollbars=yes, resizable=no,location=no, status=no')
-}
- 
+{*<script>*}
+{*{literal}*}
+{*function openRunEvent(sfalisteventsid){*}
+	{*var url = 'index.php?module=Sfalists&action=RunEvent&record='+sfalisteventsid;*}
+	{*window.open (url,'openRunEvent','height=650,width=750,top=0,left=0,toolbar=no,menubar=no,scrollbars=yes, resizable=no,location=no, status=no')*}
+{*}*}
+ {**}
 
-{/literal}
-</script>
+{*{/literal}*}
+{*</script>*}
