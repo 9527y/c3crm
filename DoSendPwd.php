@@ -48,11 +48,11 @@ else
 	
 	$mail = new SaeMail();
 	$subject = "找回密码";
-	$content = "尊敬的用户,您好,易客CRM已经收到您的找回密码请求,现已将您的密码重置为:".$pass.",请重新登录后修改.";
+	$content = "尊敬的用户,您好,云商通路CRM已经收到您的找回密码请求,现已将您的密码重置为:".$pass.",请重新登录后修改.";
 	global $log;
 	$log->info($content);
 	$from_email = "saecrm_noreply@sina.com";
-	$pwd = "c3crm321";
+	$pwd = "crm321";
 	$server_name ="smtp.sina.com";
 	$server_port = "25";
 

@@ -1,7 +1,7 @@
 <?php
 $app_strings = array (
   'LBL_CHARSET' => 'UTF-8',
-  'LBL_BROWSER_TITLE' => '易客CRM开源免费版',
+  'LBL_BROWSER_TITLE' => '云商通路CRM',
   'LBL_OR' => '或',
   'LBL_ALT_HOT_KEY' => 'Alt+',
   'LBL_SAVE_LABEL' => '保存',

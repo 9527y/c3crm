@@ -13,7 +13,7 @@ if (isset($_REQUEST['db_populate'])) $db_populate		= $_REQUEST['db_populate'];
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>易客CRM - 安装向导 - 完成</title>
+<title>云商通路CRM - 安装向导 - 完成</title>
 
 
 <link href="include/install/install.css" rel="stylesheet" type="text/css">
@@ -27,7 +27,7 @@ if (isset($_REQUEST['db_populate'])) $db_populate		= $_REQUEST['db_populate'];
 	<table border=0 cellspacing=0 cellpadding=0 width=80% align=center>
 	<tr>
 		<td class="cwHeadBg" align=left><img src="include/install/images/configwizard.gif" alt="Configuration Wizard" hspace="20" title="Configuration Wizard"></td>
-		<td class="cwHeadBg" align=right><img src="include/install/images/vtigercrm5.gif" alt="易客CRM" title="易客CRM"></td>
+		<td class="cwHeadBg" align=right><img src="include/install/images/vtigercrm5.gif" alt="云商通路CRM" title="云商通路CRM"></td>
 	</tr>
 	</table>
 	<table border=0 cellspacing=0 cellpadding=0 width=80% align=center>
@@ -46,7 +46,7 @@ if (isset($_REQUEST['db_populate'])) $db_populate		= $_REQUEST['db_populate'];
 
 				<!-- Left side tabs -->
 					<table border=0 cellspacing=0 cellpadding=10 width=100%>
-					<tr><td class="small cwUnSelectedTab" align=right><div align="left">欢迎使用易客CRM</div></td></tr>
+					<tr><td class="small cwUnSelectedTab" align=right><div align="left">欢迎使用云商通路CRM</div></td></tr>
 					<tr><td class="small cwUnSelectedTab" align=right><div align="left">安装检查</div></td></tr>
 					<tr><td class="small cwUnSelectedTab" align=right><div align="left">系统配置</div></td></tr>
 					<tr><td class="small cwUnSelectedTab" align=right><div align="left">确认配置</div></td></tr>
@@ -101,13 +101,13 @@ if(!rename("install/", $renamefile."install/"))
 		<table border=0 cellspacing=0 cellpadding=5 align="center" width=75% style="background-color:#E1E1FD;border:1px dashed #111111;">
 		<tr>
 			<td align=center class=small>
-			<b>易客CRM安装完成！</b>
+			<b>云商通路CRM安装完成！</b>
 			<hr noshade size=1>
 			<div style="width:100%;padding:10px; "align=left>
 			<ul>
 			<li>您的install.php被重命名为 <?php echo $renamefile;?>install.php.txt.
 			<li>您的install目录被重命名为 <?php echo $renamefile;?>install/.  
-			<li>易客CRM默认的用户名和密码均为admin。
+			<li>云商通路CRM默认的用户名和密码均为admin。
 			</ul>
 			</div>
 

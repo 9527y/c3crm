@@ -11,7 +11,7 @@ $default_company_name = "";
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>中国知名开放源代码客户关系管理系统：易客CRM</title>
+    <title>云商通路CRM</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">    
@@ -51,10 +51,10 @@ function logining_load(){
 				<span class="icon-bar"></span> 
 				<span class="icon-bar"></span> 				
 			</a>
-			<a class="" href="http://www.c3crm.com/" target="_blank"><img src="themes/bootcss/img/logonew.png"></a>
+			<a class="" href="http://crm.yuntonglu.cn/" target="_blank"><img src="themes/bootcss/img/logonew.png"></a>
 			<ul class="nav pull-right">
 				<li class="" style="line-height: 30px;">
-					<a href="http://www.c3crm.com/" target="_blank">专门针对小型企业开发的开源免费客户关系管理系统：易客CRM</a>
+					<a href="http://crm.yuntonglu.cn/" target="_blank"></a>
 				</li>
 			</ul>
 		</div> <!-- /container -->
@@ -134,10 +134,8 @@ function logining_load(){
 			</p>
 			
              <br>
-             <p>Copyright &copy; 2013 <a href="http://www.c3crm.com" target="_blank">上海瑞策软件有限公司</a>, all rights reserved.</p>
-			<!--<p>我能用它做什么？让系统自动的帮您跟踪客户，真正的实现销售自动化(SFA)，</p>
-			<p>让您感觉销售是件非常Easy的事情！还不心动吗，赶紧试试吧！</p>-->
-			<p>联系电话：400 680 5898 &nbsp;&nbsp;E-mail: <a href="javascript:;">sales@c3crm.cn</a></p>
+             <p>Copyright &copy; 2017 <a href="http://www.yuntonglu.cn" target="_blank">云商通路</a>, all rights reserved.</p>
+			<p>联系电话：400-616-3380</p>
 		</div> <!-- /login-extra -->
 	
 </div> <!-- /login-wrapper -->

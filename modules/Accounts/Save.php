@@ -16,9 +16,9 @@ $orsql = '';
 if (!empty($phone)) {
     $orsql .= " or phone='" . $phone . "' ";
 }
-if (!empty($email)) {
-    $orsql .= " or email='" . $email . "' ";
-}
+//if (!empty($email)) {
+//    $orsql .= " or email='" . $email . "' ";
+//}
 
 if (empty($record)) {
     $query = "SELECT accountname FROM ec_account WHERE ec_account.deleted=0 and (accountname='" . $accountname . "' {$orsql} ) and smownerid=" . $current_user->id . " ";
