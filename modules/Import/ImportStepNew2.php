@@ -139,7 +139,8 @@ $count = $ret_value['field_count'];
 switch($_REQUEST['module']){
     case 'Accounts':
         //$head = array("客户名称","创建人","联系人","负责人","职位","性别","客户状态","vip信息","热度","成交意愿","客户来源","客户类型","下次联系日期","手机号码","电话","QQ","Email","传真","微博","MSN","淘宝旺旺","网站","所属国家","所属省份","所属城市","所属区域","详细地址","客户邮编","最近5天发送邮件次数","最近一月发送邮件次数","最近三月发送短信次数","最近三月发送邮件次数","最新发送短信日期","最新发送邮件日期","最新联系时间","联系次数","最新订单日期","订单数量","订单金额","创建时间","修改时间","失效日期","姓名1","电话122","备注");
-        $head = array("客户名称","联系人","职位","性别","手机号码","电话","QQ","Email","传真","网站","所属国家","所属省份","所属城市","所属区域","详细地址","客户邮编","备注");
+//        $head = array("客户名称","联系人","职位","性别","手机号码","电话","QQ","Email","传真","网站","所属国家","所属省份","所属城市","所属区域","详细地址","客户邮编","备注");
+        $head = array("公司名称","创建人","联系人","职位","性别","手机号码","详细地址","Email","最新联系时间","联系次数","订单金额","创建时间","修改时间","成交意愿","意向项目","备注","公司名称","创建人");
     break;
     case 'Contacts':
         $head = array("姓名","客户","性别","职位","手机","Email","电话","传真","QQ","MSN","旺旺","微博","备注");
@@ -241,7 +242,7 @@ function getColumnField(){
 //    var_dump($mods);
 //    exit();
     $tabid = getTabid($_REQUEST['module']);
-	$query = "SELECT columnname,fieldlabel FROM `ec_field` WHERE tabid=$tabid ";
+	$query = "SELECT columnname,fieldlabel FROM `ec_field` WHERE tabid=$tabid ";    // column -> columnname - labname
 	$rows = $adb->getList($query);
 	if(count($rows) >0){
 		foreach($rows as $row){

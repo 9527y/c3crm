@@ -91,7 +91,7 @@ window.onload = function() {
 							4.重复的记录跳过不更新<br><br>
 						</p>
 						{if $MODULE=='Accounts'}
-						<a href="c3crm.csv" target="_blank"><font color=red size="+1"><b>>>下载样例</b></font></a>
+						<a href="account.csv" target="_blank"><font color=red size="+1"><b>>>下载样例</b></font></a>
 						{else}
 						<a href="contacts.csv" target="_blank"><font color=red size="+1"><b>>>下载样例</b></font></a>
 						{/if}

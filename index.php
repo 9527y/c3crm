@@ -134,6 +134,10 @@ if(!empty($action) && !empty($module))
 	{
 	    $skipSecurityCheck=true;
 	}
+	if ($module == 'Qunfas' || $module == 'Maillists' )
+	{
+        redirect("index.php");
+	}
 
 	$currentModuleFile = 'modules/'.$module.'/'.$action.'.php';
 	$currentModule = $module;
@@ -148,6 +152,8 @@ elseif(isset($module))
 else {
 	redirect("index.php?action=".$default_action."&module=".$default_module);
 }
+
+
 
 $log->info("current page is $currentModuleFile");	
 $log->info("current module is $currentModule ");	

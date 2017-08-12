@@ -111,8 +111,11 @@ class ImportAccount extends Accounts {
 		$this->log->info("begin account save function");
 		$this->log->info("account save function(import_overwrite)");
 		if(!empty($this->column_fields['accountname'])) {
-			$where_clause = "and ec_account.smownerid='".$current_user->id."' and ec_account.accountname='".trim($this->column_fields['accountname'])."'";
+//			$where_clause = "and ec_account.smownerid='".$current_user->id."' and ec_account.phone='".trim($this->column_fields['phone'])."'";
+			$where_clause = " and ec_account.phone='".trim($this->column_fields['phone'])."'";
 			$query = "SELECT ec_account.accountid FROM ec_account where deleted=0  $where_clause";
+
+			echo $query;
 			$result = $this->db->query($query, false, "Retrieving record $where_clause"); 
 			if ($this->db->getRowCount($result) >= 1) { 
 				/*$this->log->info("account save function(import_overwrite update)");
