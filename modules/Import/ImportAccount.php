@@ -122,7 +122,7 @@ class ImportAccount extends Accounts {
 //			$where_clause = "and ec_account.smownerid='".$current_user->id."' and ec_account.phone='".trim($this->column_fields['phone'])."'";
 			// $where_clause = " and ec_account.phone='".filter_mark(trim($this->column_fields['phone']))." and ec_account.membername='".filter_mark(trim($this->column_fields['membername']))."'";
 //			$where_clause = " and ec_account.phone='".trim($this->column_fields['phone'])." and ec_account.membername='".trim($this->column_fields['membername'])."'";
-			$where_clause = " and ec_account.phone='".trim($this->column_fields['phone'])."' and ec_account.membername='".trim($this->column_fields['membername'])."'";
+			$where_clause = " and ec_account.phone='".filter_mark($this->column_fields['phone'])."' and ec_account.membername='".filter_mark($this->column_fields['membername'])."'";
 			$query = "SELECT ec_account.accountid FROM ec_account where deleted=0  $where_clause";
 
 //			echo $query;
