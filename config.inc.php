@@ -16,7 +16,7 @@ $dbconfig['db_port'] = ':3306';
 $dbconfig['db_username'] = 'mq';
 $dbconfig['db_password'] = 'qwer!@#$';
 //$dbconfig['db_name'] = 'freecrm';
-$dbconfig['db_name'] = 'orgincrm';
+$dbconfig['db_name'] = 'testorgincrm';
 $dbconfig['db_type'] = 'mysql';
 $dbconfig['db_status'] = 'true';
 

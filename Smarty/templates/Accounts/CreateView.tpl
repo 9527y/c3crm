@@ -1,4 +1,4 @@
-<script type="text/javascript" src="modules/{$MODULE}/{$SINGLE_MOD}.js"></script>
+<script type="text/javascript" src="modules/{$MODULE}/{$SINGLE_MOD}.js?v=0.1"></script>
 
 {*<!-- Contents -->*}
 <form name="EditView" method="POST" action="index.php" onsubmit="account_submit();">

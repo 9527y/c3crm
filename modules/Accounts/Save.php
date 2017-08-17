@@ -11,26 +11,27 @@ global $current_user;
 $accountname = $_REQUEST['accountname'];
 $phone = $_REQUEST['phone'];
 $email = $_REQUEST['email'];
+$membername = $_REQUEST['membername'];
 $record = $_REQUEST['record'];
 $orsql = '';
 if (!empty($phone)) {
-    $orsql .= " or phone='" . $phone . "' ";
+    $orsql .= " and phone='" . $phone . "' ";
 }
 //if (!empty($email)) {
 //    $orsql .= " or email='" . $email . "' ";
 //}
 
 if (empty($record)) {
-    $query = "SELECT accountname FROM ec_account WHERE ec_account.deleted=0 and (accountname='" . $accountname . "' {$orsql} ) and smownerid=" . $current_user->id . " ";
+    $query = "SELECT accountname FROM ec_account WHERE ec_account.deleted=0 and (membername='" . $membername . "' {$orsql} ) -- and smownerid=" . $current_user->id . " ";
 } else {
-    $query = "SELECT accountname FROM ec_account WHERE ec_account.deleted=0 and accountid !=" . $record . " and (accountname='" . $accountname . "' {$orsql}) and smownerid=" . $current_user->id . " ";
+    $query = "SELECT accountname FROM ec_account WHERE ec_account.deleted=0 and accountid !=" . $record . " and (membername='" . $membername . "' {$orsql}) --  and smownerid=" . $current_user->id . " ";
 }
 
 $result = $adb->query($query);
 //changed by dingjianting on 2006-10-26 for checking username exist in dicuz database
 if ($adb->num_rows($result) > 0) {
     if (isset($_REQUEST['dup_check']) && $_REQUEST['dup_check'] != '') {
-        echo "客户:'" . $accountname . "'已存在或电话|Email重复！";
+        echo "客户:'" . $accountname . "'已存在，联系人和电话重复！";
     } else {
         echo '<script>history.go(-1)</script>';
     }

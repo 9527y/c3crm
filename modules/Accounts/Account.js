@@ -301,8 +301,9 @@ function account_submit() {
     var accountname = window.document.EditView.accountname.value;
     var phone = window.document.EditView.phone.value;
     var email = window.document.EditView.email.value;
+    var membername = window.document.EditView.membername.value;
     var record = window.document.EditView.record.value;
-    var strstring = "&accountname=" + accountname + "&phone=" + phone + "&email=" + email + "&record=" + record;
+    var strstring = "&membername=" + membername +"&accountname=" + accountname + "&phone=" + phone + "&email=" + email + "&record=" + record;
 
     var res = false;
 
@@ -328,9 +329,10 @@ function check_duplicate_ajax() {
     var accountname = window.document.EditView.accountname.value;
     var phone = window.document.EditView.phone.value;
     var email = window.document.EditView.email.value;
+    var membername = window.document.EditView.membername.value;
     var record = window.document.EditView.record.value;
 
-    var strstring = "&accountname=" + accountname + "&phone=" + phone + "&email=" + email + "&record=" + record;
+    var strstring = "&membername=" + membername +"&accountname=" + accountname + "&phone=" + phone + "&email=" + email + "&record=" + record;
 
     $.ajax({
         type: "GET",
