@@ -88,6 +88,14 @@ class ImportAccount extends Accounts {
 			$this->column_fields[$key]='';
 	}
 
+    function filter_mark($text){
+        if(trim($text)=='')return '';
+        $text=preg_replace("/[[:punct:]\s]/",' ',$text);
+        $text=urlencode($text);
+        $text=preg_replace("/(%7E|%60|%21|%40|%23|%24|%25|%5E|%26|%27|%2A|%28|%29|%2B|%7C|%5C|%3D|\-|_|%5B|%5D|%7D|%7B|%3B|%22|%3A|%3F|%3E|%3C|%2C|\.|%2F|%A3%BF|%A1%B7|%A1%B6|%A1%A2|%A1%A3|%A3%AC|%7D|%A1%B0|%A3%BA|%A3%BB|%A1%AE|%A1%AF|%A1%B1|%A3%FC|%A3%BD|%A1%AA|%A3%A9|%A3%A8|%A1%AD|%A3%A4|%A1%A4|%A3%A1|%E3%80%82|%EF%BC%81|%EF%BC%8C|%EF%BC%9B|%EF%BC%9F|%EF%BC%9A|%E3%80%81|%E2%80%A6%E2%80%A6|%E2%80%9D|%E2%80%9C|%E2%80%98|%E2%80%99|%EF%BD%9E|%EF%BC%8E|%EF%BC%88)+/",'',$text);
+        $text=urldecode($text);
+        return trim($text);
+    }
 
 	function isExist()
 	{
@@ -112,10 +120,12 @@ class ImportAccount extends Accounts {
 		$this->log->info("account save function(import_overwrite)");
 		if(!empty($this->column_fields['accountname'])) {
 //			$where_clause = "and ec_account.smownerid='".$current_user->id."' and ec_account.phone='".trim($this->column_fields['phone'])."'";
-			$where_clause = " and ec_account.phone='".trim($this->column_fields['phone'])."'";
+			// $where_clause = " and ec_account.phone='".filter_mark(trim($this->column_fields['phone']))." and ec_account.membername='".filter_mark(trim($this->column_fields['membername']))."'";
+//			$where_clause = " and ec_account.phone='".trim($this->column_fields['phone'])." and ec_account.membername='".trim($this->column_fields['membername'])."'";
+			$where_clause = " and ec_account.phone='".trim($this->column_fields['phone'])."' and ec_account.membername='".trim($this->column_fields['membername'])."'";
 			$query = "SELECT ec_account.accountid FROM ec_account where deleted=0  $where_clause";
 
-			echo $query;
+//			echo $query;
 			$result = $this->db->query($query, false, "Retrieving record $where_clause"); 
 			if ($this->db->getRowCount($result) >= 1) { 
 				/*$this->log->info("account save function(import_overwrite update)");
