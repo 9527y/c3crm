@@ -101,7 +101,7 @@ function check()
 		document.editform.phone_mobile.focus();
 		return false;
 	}
-	var mobile = /^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/; 
+	var mobile = /^1[0-9]{10}$/;
 	var phone_mobile = document.editform.phone_mobile.value;
 	if (!mobile.test(phone_mobile)) {
 		alert('手机格式不正确');
