@@ -88,7 +88,7 @@ else
 	$limit_start_rec = $start_rec -1;
 
 $query .=" order by {$ordersql} {$sorder} "; 
-$query.=" limit $limit_start_rec,$list_max_entries_per_page";
+// $query.=" limit $limit_start_rec,$list_max_entries_per_page";
 
 $result = $adb->getList($query);
 $nun_rows = $adb->num_rows($result); 
